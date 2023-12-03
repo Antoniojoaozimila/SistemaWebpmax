@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function NavBar() {
+    const date = new Date();
   return (
     <nav className="bg-zinc-300 fixed py-2 px-16 w-[calc(100%-250px)] flex justify-between items-center">
       <div>
@@ -11,6 +12,9 @@ export default function NavBar() {
           <p className="flex gap-1">
             <FontAwesomeIcon icon={faCalendar} className="w-5"/>
             <span className="font-bold">Data:</span> 
+            <span>
+            {date.getDate()}/{date.getMonth()}/{date.getFullYear()}
+            </span>
           </p>
         </div>
       </div>
@@ -22,7 +26,7 @@ export default function NavBar() {
           </span>
           <Link href="/useres" className="hover:text-sky-500 transition-all hover:-translate-y-1">António Zimila</Link>
         </p>
-        <button className="flex items-center hover:text-sky-500 transition-all hover:-translate-y-1">
+        <button className="flex items-centerhover:text-sky-500 transition-all hover:-translate-y-1">
             <FontAwesomeIcon icon={faRightFromBracket} className="w-5"/>
             <span>Sair</span>
         </button>
