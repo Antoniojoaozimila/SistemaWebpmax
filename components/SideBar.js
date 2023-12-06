@@ -1,17 +1,19 @@
-import React from "react";
+
 import Link from "next/link";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faCartShopping,
-  faChevronDown,
   faMoneyBill,
   faTruckFast,
   faUsers,
   faWarehouse,
 } from "@fortawesome/free-solid-svg-icons";
+import SidebarItem from "./SidebarItem";
 
 export default function SideBar() {
+
+
   return (
     <aside
       className="bg-zinc-900 text-white
@@ -30,15 +32,7 @@ export default function SideBar() {
         <ul>
           {items.map((item, i) => {
             return (
-              <li className="border-b border-dashed cursor-pointer">
-                <p className="p-2 flex justify-between hover:bg-zinc-800">
-                  <span className="flex items-center gap-1">
-                    <FontAwesomeIcon icon={item.icon} className="w-6" />
-                    {item.name}
-                  </span>
-                  <FontAwesomeIcon icon={faChevronDown} className="w-4" />
-                </p>
-              </li>
+              <SidebarItem item={item}/>
             );
           })}
         </ul>
@@ -51,21 +45,70 @@ const items = [
   {
     name: "Usuarios",
     icon: faUsers,
+    subMenus:[
+      {
+        nome:"Criar usuário",
+        href:"/"
+      },
+      {
+        nome:"Listar usuário",
+        href:"/users",
+      },
+    ]
   },
   {
     name: "Produtos",
     icon: faCartShopping,
+    subMenus: [
+      {
+        nome: "Criar produtos",
+        href:"/",
+      },
+      {
+        nome:"listar produtos",
+        href:"/products",
+      },
+    ]
   },
   {
     name: "Vendas",
     icon: faMoneyBill,
+    subMenus: [{
+      nome:"Criar usuario",
+      href:"/",
+    },
+    {
+      nome:"listar",
+      href:"/",
+    },
+  ]
   },
   {
     name: "Fornecedores",
     icon: faTruckFast,
+    subMenus:[
+      {
+        nome:"Criar usuario",
+        href:"/",
+      },
+      {
+        nome:"Criar",
+        href:"/",
+      },
+    ]
   },
   {
     name: "Armazens",
     icon: faWarehouse,
+    subMenus:[
+      {
+        nome: "Criar usuario",
+        href:"/",
+      },
+      {
+        nome:"criar",
+        href:"/",
+      },
+    ]
   },
 ];

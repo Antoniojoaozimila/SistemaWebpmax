@@ -1,19 +1,23 @@
-import { faCalendar, faRightFromBracket, faUserShield } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faRightFromBracket,
+  faUserShield,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
 
 export default function NavBar() {
-    const date = new Date();
+  const date = new Date();
   return (
     <nav className="bg-zinc-300 fixed py-2 px-16 w-[calc(100%-250px)] flex justify-between items-center">
       <div>
         <div>
-          <p className="flex gap-1">
-            <FontAwesomeIcon icon={faCalendar} className="w-5"/>
-            <span className="font-bold">Data:</span> 
+          <p className="flex gap-1 items-center">
+            <FontAwesomeIcon icon={faCalendar} className="w-5" />
+            <span className="font-bold">Data:</span>
             <span>
-            {date.getDate()}/{date.getMonth()}/{date.getFullYear()}
+              {date.getDate()}/{date.getMonth()}/{date.getFullYear()}
             </span>
           </p>
         </div>
@@ -24,11 +28,16 @@ export default function NavBar() {
           <span className="flex mr-1 bg-zinc-900 rounded-full text-sky-500 w-8 h-8 items-center justify-center">
             <FontAwesomeIcon icon={faUserShield} className="w-5" />
           </span>
-          <Link href="/useres" className="hover:text-sky-500 transition-all hover:-translate-y-1">António Zimila</Link>
+          <Link
+            href="/useres"
+            className="hover:text-sky-500 transition-all hover:-translate-y-1"
+          >
+            António Zimila
+          </Link>
         </p>
         <button className="flex items-centerhover:text-sky-500 transition-all hover:-translate-y-1">
-            <FontAwesomeIcon icon={faRightFromBracket} className="w-5"/>
-            <span>Sair</span>
+          <FontAwesomeIcon icon={faRightFromBracket} className="w-5" />
+          <span>Sair</span>
         </button>
       </div>
     </nav>
