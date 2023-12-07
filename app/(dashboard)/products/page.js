@@ -1,15 +1,13 @@
-import ProductsTableRow from '@/components/ProductsTableRow'
-import React from 'react'
+import PageHeader from '@/components/PageHeader';
+import ProductsTableRow from '@/components/ProductsTableRow';
+import React from 'react';
 
 export default function page() {
   return (
     <>
-    <header>
-        <h2 className="text-2xl font-bold text-orange-500">
-          Listar de Produtos
-        </h2>
-        <p>Aqui voce pode visualizar e listar seus produtos registaados</p>
-      </header>
+    <PageHeader title="Listar de produtos Registados no Sistema">
+     Aqui voce pode visualizar todos  produtos registados no sistema
+    </PageHeader>
 
       <section className="mt-8">
         <p>Produtos totais: 20</p>

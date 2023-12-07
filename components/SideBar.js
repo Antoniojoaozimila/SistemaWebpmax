@@ -48,7 +48,7 @@ const items = [
     subMenus:[
       {
         nome:"Criar usuário",
-        href:"/"
+        href:"/users/create"
       },
       {
         nome:"Listar usuário",

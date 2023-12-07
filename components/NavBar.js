@@ -35,7 +35,7 @@ export default function NavBar() {
             António Zimila
           </Link>
         </p>
-        <button className="flex items-centerhover:text-sky-500 transition-all hover:-translate-y-1">
+        <button className="flex items-center hover:text-sky-500 transition-all hover:-translate-y-1">
           <FontAwesomeIcon icon={faRightFromBracket} className="w-5" />
           <span>Sair</span>
         </button>

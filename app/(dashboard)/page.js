@@ -8,7 +8,6 @@ export default function Home(){
             height={300}
             className="bg-zinc-900 block mx-auto p-2 rounded-md"
             />
-
             <p className="mt-10 text-center">Ola João Zimila Seja bem vindo(a) de volta</p>
         </div>
     </div>
